@@ -1,0 +1,374 @@
+baseURL: "/"
+languageCode: "en-us"
+title: "Hugo Profile"
+theme: hugo-profile
+
+outputs:
+  home:
+    - "HTML"
+    - "RSS"
+    - "JSON"
+  page:
+    - "HTML"
+    - "RSS"
+    
+Paginate: 3
+enableRobotsTXT: true
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+# Menus:
+#   main:
+#     # - identifier: blog
+#     #   name: Blog
+#     #   title: Blog posts
+#     #   url: /blogs
+#     #   weight: 1
+    # - identifier: gallery
+    #   name: Gallery
+    #   title: Blog posts
+    #   url: /gallery
+    #   weight: 2
+    # # Dropdown menu
+    # - identifier: dropdown
+    #   title: Example dropdown menu
+    #   name: Dropdown
+    #   weight: 3
+    # - identifier: dropdown1
+    #   title: example dropdown 1
+    #   name: example 1
+    #   url: /#
+    #   parent: dropdown
+    #   weight: 1
+    # - identifier: dropdown2
+    #   title: example dropdown 2
+    #   name: example 2
+    #   url: /#
+    #   parent: dropdown
+    #   weight: 2
+
+params:
+  title: "Hugo Profile"
+  description: This is my site
+  # staticPath: ""  # The path to serve the static files from
+  favicon: ""
+
+  # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
+  # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
+  # Note the lack of "" in true, it should be of boolean type.
+  useBootstrapCDN: false
+
+  # If you want to load dynamically responsive images from Cloudinary
+  # This requires your images to be uploaded + hosted on Cloudinary
+  # Uncomment and change YOUR_CLOUD_NAME to the Cloud Name in your Cloudinary console
+  # cloudinary_cloud_name: "YOUR_CLOUD_NAME"
+
+  # Whether the fade animations on the home page will be enabled
+  animate: true
+
+  theme:
+    disableThemeToggle: false
+    defaultTheme: "light" # dark
+
+  font:
+    fontSize: 1rem # default: 1rem
+    fontWeight: 400 # default: 400
+    lineHeight: 1.5 # default: 1.5
+    textAlign: left # default: left
+
+  # # color preference
+  color:
+    textColor: "#1B3B6F"
+    secondaryTextColor: "#416788" 
+    backgroundColor: "#EFF6FA"
+    primaryColor: "#05668D" 
+    secondaryColor: "#EFF6FA" #"#DCEDFF"
+
+  #   darkmode:
+  #     textColor:
+  #     secondaryTextColor:
+  #     backgroundColor:
+  #     secondaryBackgroundColor:
+  #     primaryColor:
+  #     secondaryColor:
+
+  # If you want to customize the menu, you can change it here
+  navbar:
+    align: ms-auto # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
+    brandLogo: "images/bars.png" # Logo for the brand | default is the favicon variable
+    brandName: "Vladimir Dinolov" # Brand name for the brand | default is the title variable
+    disableSearch: true
+    menus:
+      disableAbout: false
+      disableExperience: false
+      disableEducation: false
+      disableProjects: false 
+      disableAchievements: false
+      disableContact: false
+
+  # Hero
+  hero:
+    enable: true
+    title: "Vladimir Dinolov"
+    subtitle: "Full Stack Analytics Engineer"
+    content: MSc in Applied Data Science @ Syracuse University 🟠<br> Senior Analytics Engineer @ [Conveyor](https://www.conveyor.com) 🧑🏻‍💻<br>Lifelong Learner 📖
+    image: /images/me.jpg
+    button:
+      enable: true
+      name: "Resume"
+      url: "https://drive.google.com/file/d/1xxT2BIoxK2UR8qQdxacsKjYnoSUoCNd8/view?usp=sharing"
+      download: true
+      newPage: true
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fab fa-linkedin-in
+          url: https://www.linkedin.com/in/vladimirdinolov
+        - icon: far fa-envelope
+          url: "mailto:vladimir.dinolov@gmail.com"
+        - icon: fab fa-github
+          url: "https://github.com/vladimir-dinolov"
+      # customIcons:
+      #   - icon: /fav.png
+      #     url: "https://example.com"
+      
+  # About
+  about:
+    enable: true
+    title: "About Me"
+    image: "/images/me_kwk.png"
+    content: >
+      I help organizations meet their business goals by building full-stack data solutions.
+
+    skills:
+      enable: true
+      title: "Here are technologies I've been working with recently:"
+      items:
+        - "dbt"
+        - "Looker"
+        - "BigQuery"
+        - "Snowflake"
+        - "SQLFluff"
+        - "Airflow"
+        - "Great Expectations"
+        - "Confluence"
+        - "Ruby"
+        - "JavaScript"
+
+  # Experience
+  experience:
+    enable: true
+    # title: "Custom Name"
+    items:
+      - job: "Senior Analytics Engineer"
+        company: "Conveyor"
+        companyUrl: "https://www.conveyor.com"
+        date: "2021 - 2023"
+        info:
+          enable: false
+        # featuredLink:
+        #   enable: true
+        #   name: "View the project"
+        #   url: "https://example.com"
+        content: |
+          - Oversaw **full-stack data insights platform** using **dbt**, **Looker**, **Postgres**, **BigQuery**, and **Stitch**, defining best practices for **event-driven architecture**, **business success metrics**, **data modeling**, **SQL query structure**, and **data ops** (e.g., **version control, testing, CI/CD**) as first data hire in the organization.
+          - Initialized **dbt** project and contributed and maintained 250+ models, 100+ tests, and 150+ different **source tables**.
+          - Managed **Looker** instance with over 100+ models, views, and explores, using **LookML** to maintain and build **version-controlled data products** analyzing **customer acquisition**, **retention**, and **growth KPIs**.
+          - Deployed an **interactive, network visualization application** analyzing 500+ **B2B** relationships across **SaaS** trust platform, contributing to the company nearing **$1 million** in annual recurring revenue.
+          - Created and maintained **architecture** and **systems documentation** including an **Analytics Catalog**, a scalable resource to support **self-service** and **single-source-of-truth analytics** for a team of 20+.
+
+      - job: "Lead Analytics Engineer"
+        company: "SAM Labs"
+        companyUrl: "https://samlabs.com/us/"
+        date: "2020 - 2021"
+        info:
+          enable: false
+        content: |
+          - Performed **data infrastructure audit** within first 60 days, resulting in a reclassification of role from **Data Analyst** to **Analytics Engineer** based on business needs.
+          - Led **vendor selection processes** for **data warehouse**, **ETL** tool, and **BI** tool and established **modern data stack** of **Snowflake**, **Fivetran**, **Matillion**, **dbt**, and **Sigma**.
+          - Supported four business functions’ data needs, including the design and implementation of a **multi-terabyte data warehouse** from **conceptual model** to **logical model** to **physical storage**.
+          - Created company-wide metrics and **forecasting models** using **Snowflake**, **SQL**, **Python**, **dbt**, and **APIs** for **Google Analytics**, **Hubspot**, and **Shopify**, resulting in an increase of over **$100,000** in year-over-year revenue.
+
+      - job: "Data Analyst"
+        company: "Commit"
+        companyUrl: "https://commitpartnership.org"
+        date: "2020 - 2021"
+        info:
+          enable: false
+        content: |
+          - Oversaw a portfolio of **data visualization** and **analysis** projects by building **ETL business intelligence pipelines** using **SQL**, **Tableau**, **Python**, **Alteryx**, and the **Salesforce API**, resulting in curated dashboards for 50,000+ end users.
+          - Performed a bond dollars analysis in **Tableau** and **SQL**, which was used to successfully influence voters to pass a $3.5 billion dollar fund to upgrade 14 schools and build 10 new schools.
+          - Collaborated with the philanthropy team to create **Tableau** dashboards for donor stakeholders, resulting in a 15% increase in donations, a budget surplus of $500,000, and a successful multi-million dollar grant application.
+
+      - job: "Senior Policy Analyst"
+        company: "Teach Plus"
+        companyUrl: "https://teachplus.org"
+        date: "2018 - 2020"
+        info:
+          enable: false
+        content: |
+          - Promoted to **Senior Analyst** to manage a team of 15 across multiple districts, with projects including implementing community resource centers and **career and technical education programs** serving 60,000 students.
+          - Led statewide **data-driven** advocacy campaign to influence the Texas Legislature to pass House Bill 3, driving more than **$1 billion** for teacher performance-based pay, impacting more than 28.7 million Texans.
+          - Advocated for the successful implementation of an edTPA pilot in the state of Texas, affecting +1,000 teacher candidates across +50 universities and colleges. 
+          - Authored a paper in collaboration with Dallas ISD titled “Why Teacher Leadership Matters” which led to the creation of the LEAD program, providing 10,000 teachers pathways to leadership.
+          
+      - job: "Master Teacher"
+        company: "Dallas ISD"
+        companyUrl: "https://www.dallasisd.org"
+        date: "2014 - 2020"
+        info:
+          enable: false
+        content: |
+          - Recognized as one of the highest-performing K-8 teachers in the state of Texas as one of only 3000 teachers to achieve Master Teacher designation.
+          - Ranked in the 99th percentile out of 10,000 teachers in Dallas ISD, receiving promotions from Proficient to Exemplary to Master teacher.
+  
+  # Education
+  education:
+    enable: true
+    # title: "Custom Name"
+    index: false
+    items:
+      - title: "Master of Applied Data Science"
+        school:
+          name: "Syracuse University"
+          url: "https://ischool.syr.edu/academics/applied-data-science-masters-degree/"
+        date: "2018 - 2020"
+        content: |- 
+          - Awarded MSc in Applied Data Science and [Cloud Management Certification](https://ischool.syr.edu/academics/cas-program-cloud-management/) from the School of Information Studies.
+        featuredLink:
+          enable: true
+          name: "Portfolio Milestone"
+          url: "https://github.com/vladimir-dinolov/Syracuse-Portfolio-Milestone"
+
+      - title: "Bachelor of Science in Public Policy and Psychology"
+        school:
+          name: "Florida State University"
+          url: "https://coss.fsu.edu"
+        date: "2009 - 2012"
+        content: |-
+          - Awarded dual-degree with a BSc in Public Policy and a BSc in Psychology.
+
+  # Achievements
+  achievements:
+    enable: true
+    # title: "Custom Name"
+    items:
+      - title: Cloud Management Certificate of Advanced Study (CAS), Syracuse University
+        content: >
+          I was awarded a CAS in Cloud Management that provided hands-on experience in cloud solutions 
+          management, cloud data management, and cloud networking and security management.
+        url: "https://ischool.syr.edu/academics/cas-program-cloud-management/"
+      - title: SQL for Data Science, UC Davis
+        content: I completed a SQL microcredential with a focus on Data Science applications. 
+        url: "https://coursera.org/share/f02773758a4fcde6a53d04681106fbf3"
+      - title: Level 1 & 2 Google Certified Educator
+        content: >
+          I received my Level 1 and 2 Google Certified Educator badges. The Google for Education professional development program
+          provides educators with the opportunity to display mastery of Google products integrated in the classroom.
+        url: https://6bf77ab0-a-9bbfa6a6-s-sites.googlegroups.com/a/prosper-isd.net/pd-badges/certifications/Badge-GCE-Level2.jpg?attachauth=ANoY7cpIa_FrwZS_LAjFGoZsrcDyuIMH-REMqZyPGS99XLTWd33UOj7b8TconBd6NS6S-ARjRNv2XjXrkqyUwL8CpySJdB_VUwHt5i8Qx66Ae3lE3hXQ3SuH2k8QxX7PJlualKbhTyi3OQdDEOIDqMSGQ-MCZU8Lb2oBf_5NatY4ZujnvW0c-RWHCYjC8OLyujQtQblHhhG5pBtMAgLLd-AnwSUCkIqZG18tEgRyhWm46zZl8CLjU0g%3D&attredirects=0
+      - title: Master Teacher Designation
+        content: >
+          I was ranked in the top 5% of K-12 educators in the state of Texas and received the highest level of designation across three different levels: Recognized, Exemplary and Master. 
+        url: https://tealprod.tea.state.tx.us/Tea.Scoms.Web/External/ViewCert?teacherId=1405
+
+  # projects
+  projects:
+    enable: true
+    title: "My Work"
+    items:
+      - title: Activity Stream, Conveyor
+        content: >
+          A method of data warehouse design and data modeling focused on 
+          transforming raw tables into a single, time series table called 
+          an activity stream. Due to intellectual property laws I cannot 
+          share a live demo of the activity stream.
+        image: /images/projects/activity_schema.png
+        featured:
+          name: Learn More
+          link: https://github.com/ActivitySchema/ActivitySchema/blob/main/2.0.md
+        badges:
+          - "dbt"
+          - "SQL"
+          - "Looker"
+      - title: Global Lifetime Value Dashboard, SAM Labs
+        content: >
+          A summary dashboard of quarterly and monthly lifetime value for customers across the globe. Uses geolocation data and financial data to summarize countries' lifetime value, market size, and market visibility.
+        image: /images/projects/samlabs_2.png
+        featured:
+          name: Explore Dashboard
+          link: https://public.tableau.com/shared/PGCZSK6YB?:display_count=n&:origin=viz_share_link
+        badges:
+          - "Python"
+          - "SQL"
+          - "Tableau"
+      - title: Modern Data Stack, SAM Labs
+        content: >
+          Performed data infrastructure audit then led vendor selection 
+          processes for data warehouse, ETL tool, and BI tool and 
+          established modern data stack of Snowflake, Matillion, dbt, and Sigma.
+        image: /images/projects/samlabs_3.png
+        featured:
+          name: Learn More
+          link: https://docs.google.com/presentation/d/1sUmAvudGX_RyPs2Q2dQZ4klnpYNdfIuOszsXqobo_Hk/edit?usp=sharing
+        badges:
+          - "dbt"
+          - "SQL"
+          - "Snowflake"
+          - "Matillion"
+          - "Sigma"
+      - title: Omnichannel Marketing Analysis, SAM Labs
+        content: >
+          A compilation of experiments used to implement SAM Labs sales and marketing. Examines traffic, impressions, sales, and opportunities.
+          Includes measures of statistical significance, including correlation and causality tests, multivariate regressions, and time series.
+        image: /images/projects/samlabs_1.png
+        featured:
+          name: Read Report
+          link: https://rpubs.com/vladimir_dinolov/797263
+        badges:
+          - "R"
+          - "Markdown"
+          - "Statistics"
+      - title: Data Product Usage Dashboard, Commit
+        content: >
+          A dashboard summarizing usage across Commit's suite of data dashboards. Data sourced from Google Analytics.
+        image: /images/projects/commit_2.jpeg
+        featured:
+          name: Learn More
+          link: https://github.com/vladimir-dinolov/Google-Analytics
+        badges:
+          - "Python"
+          - "SQL"
+          - "Tableau"
+          - "Google Analytics"
+      - title: Texas Teacher Dashboard, Commit
+        content: A dashboard visualizing the Texas teacher workforce by school district. Includes percentage of first year teachers, average base salary, years of tenure, years of experience, and teacher turnover rates. 
+        image: /images/projects/commit_1.png
+        featured:
+          name: Explore Dashboard
+          link: https://public.tableau.com/views/FirstYearTeacherAnalysisV43_2/FullStory?:language=en-US&:display_count=n&:origin=viz_share_link
+        badges:
+          - "Python"
+          - "SQL"
+          - "Tableau"
+
+  #Contact
+  contact:
+    enable: true
+    title: "Contact"
+    content: Send me an email to learn more about my services.
+    email: vladimir.dinolov@gmail.com
+    btnName: Email
+
+  footer:
+    recentPosts:
+      path: "blogs"
+      count: 3
+      title: Recent Posts
+      enable: false
+      disableFeaturedImage: false
+
+  # List pages like blogs and posts
+  listPages:
+    disableFeaturedImage: true
