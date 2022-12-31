@@ -1,6 +1,6 @@
-baseURL: "/"
+baseURL: "https://vladimirdinolov.netlify.app"
 languageCode: "en-us"
-title: "Hugo Profile"
+title: "Vladimir Dinolov"
 theme: hugo-profile
 
 outputs:
