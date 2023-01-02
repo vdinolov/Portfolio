@@ -2,7 +2,6 @@ baseURL: "https://vladimirdinolov.com"
 languageCode: "en-us"
 title: "Vladimir Dinolov"
 theme: hugo-profile
-googleAnalytics: G-WXDK3QYMKL
 
 outputs:
   home:
@@ -15,6 +14,7 @@ outputs:
     
 Paginate: 3
 enableRobotsTXT: true
+googleAnalytics: G-WXDK3QYMKL
 
 markup:
   goldmark:
@@ -23,11 +23,11 @@ markup:
 
 # Menus:
 #   main:
-#     # - identifier: blog
-#     #   name: Blog
-#     #   title: Blog posts
-#     #   url: /blogs
-#     #   weight: 1
+    # - identifier: blog
+    #   name: Blog
+    #   title: Blog posts
+    #   url: /blogs
+    #   weight: 1
     # - identifier: gallery
     #   name: Gallery
     #   title: Blog posts
